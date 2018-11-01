@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="266.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.gui.controllers.TicketDisplay">
+   <children>
+      <VBox layoutX="28.0" layoutY="386.0" prefHeight="120.0" prefWidth="226.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="226.0">
+               <children>
+                  <Button fx:id="splitCheck" mnemonicParsing="false" prefHeight="60.0" prefWidth="113.0" text="SPLIT" />
+                  <Button fx:id="addDiscount" mnemonicParsing="false" prefHeight="60.0" prefWidth="113.0" text="DISCOUNT" />
+               </children>
+            </HBox>
+            <Button fx:id="charge" mnemonicParsing="false" prefHeight="60.0" prefWidth="226.0" text="CHARGE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox fx:id="itemsAndTotal" layoutX="83.0" layoutY="36.0" prefHeight="276.0" prefWidth="100.0" AnchorPane.bottomAnchor="135.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <ScrollPane fx:id="itemsScroll" hbarPolicy="NEVER" prefHeight="436.0" prefWidth="256.0">
+               <content>
+                  <VBox fx:id="itemsBox" alignment="CENTER" prefHeight="385.0" prefWidth="253.0" />
+               </content>
+            </ScrollPane>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="79.0" prefWidth="150.0" />
+                  <VBox fx:id="taxAndTotal" nodeOrientation="RIGHT_TO_LEFT" prefHeight="79.0" prefWidth="143.0">
+                     <children>
+                        <Label fx:id="taxLabel" text="Tax : $0.00" />
+                        <Label fx:id="totalLabel" text="Total: $0.00" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
